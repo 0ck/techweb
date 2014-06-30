@@ -1,6 +1,9 @@
-{% extends "UserBundle::layout.html.twig" %}
+{% extends "AppliUserBundle::layout.html.twig" %}
 
 {% block fos_user_content %}
 
-{% include "UserBundle:Profile:show_content.html.twig" %}
+{% include "AppliUserBundle:Profile:show_content.html.twig" %}
+
+<a href="{{ path('fos_user_profile_edit') }}" role="button" class="btn btn-default" type="btn" id="add_tache" name="add_tache" value=""> Editer votre profile </a>
+
 {% endblock fos_user_content %}
