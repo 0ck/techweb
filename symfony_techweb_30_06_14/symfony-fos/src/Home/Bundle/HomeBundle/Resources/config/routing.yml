@@ -1,0 +1,11 @@
+home_home_homepage:
+    pattern:  /
+    defaults: { _controller: HomeHomeBundle:Default:index }
+
+HomeHomeBundle_project:
+    resource: "@HomeHomeBundle/Resources/config/routing/project.yml"
+    prefix:   /project
+
+HomeHomeBundle_tache:
+    resource: "@HomeHomeBundle/Resources/config/routing/tache.yml"
+    prefix:   /tache

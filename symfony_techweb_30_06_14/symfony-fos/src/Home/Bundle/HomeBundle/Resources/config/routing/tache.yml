@@ -1,0 +1,30 @@
+tache:
+    pattern:  /
+    defaults: { _controller: "HomeHomeBundle:Tache:index" }
+
+tache_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "HomeHomeBundle:Tache:show" }
+
+tache_new:
+    pattern:  /new
+    defaults: { _controller: "HomeHomeBundle:Tache:new" }
+
+tache_create:
+    pattern:  /create
+    defaults: { _controller: "HomeHomeBundle:Tache:create" }
+    requirements: { _method: post }
+
+tache_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "HomeHomeBundle:Tache:edit" }
+
+tache_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "HomeHomeBundle:Tache:update" }
+    requirements: { _method: post|put }
+
+tache_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "HomeHomeBundle:Tache:delete" }
+    requirements: { _method: post|delete }

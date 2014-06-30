@@ -1,0 +1,28 @@
+{% extends "AppliUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+{% if error %}
+    <div>{{ error|trans }}</div>
+{% endif %}
+
+<form  role="form" action="{{ path("fos_user_security_check") }}" method="post">
+	<div class="form-group" style="width:20%;margin: 0 auto;">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    </div>
+<div class="form-group" style="width:20%;margin: 0 auto;">
+    <label for="username">username</label>
+    <input placeholder="Username" class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+</div>
+<div class="form-group" style="width:20%;margin: 0 auto;">
+    <label for="password">password</label>
+    <input placeholder="Password" class="form-control" type="password" id="password" name="_password" required="required" />
+</div>
+<div class="checkbox" style="width:20%;margin: 0 auto;">
+    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <label for="remember_me">remember me</label>
+</div>
+<div class="form-group" style="width:20%;margin: 0 auto;">
+    <button class="btn btn-default" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}"> Login </button>
+    </div>
+</form>
+{% endblock fos_user_content %}
